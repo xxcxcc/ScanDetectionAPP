@@ -1,17 +1,18 @@
-﻿<Window x:Class="ScanDetectionAPP.Views.LoginView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ScanDetectionAPP.Views"
-        xmlns:hc="https://handyorg.github.io/handycontrol"
-        mc:Ignorable="d"
-        Title="登录"
-        Width="450"
-        Height="600"
-        Icon="/Resource/激光雷达.ico"
-        ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen">
+﻿<Window
+    x:Class="ScanDetectionAPP.Views.LoginView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:ScanDetectionAPP.Views"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    Title="登录"
+    Width="450"
+    Height="600"
+    Icon="/Resource/激光雷达.ico"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
 
     <Grid Background="#FFCCD0D6" ShowGridLines="False">
         <!--  分列  -->
@@ -82,7 +83,7 @@
 
             <Grid Height="50" Margin="0,5,0,0">
                 <hc:TextBox
-                    Text="{Binding  UserName}"
+                    Text="{Binding UserName}"
                     Height="50"
                     hc:InfoElement.Placeholder="请输入用户名"
                     hc:InfoElement.ShowClearButton="True"
@@ -120,6 +121,7 @@
 
             <Button
                 Content="安全登录"
+                Command="{Binding LoginCommand}"
                 Height="50"
                 Margin="0,30,0,0"
                 HorizontalAlignment="Stretch"
@@ -129,7 +131,6 @@
                 hc:BackgroundSwitchElement.MouseHoverBackground="Coral"
                 Background="#FF1A3FB1"
                 BorderBrush="{x:Null}"
-                Command="{Binding LoginCommand}"
                 FontFamily="微软雅黑"
                 FontSize="20"
                 FontWeight="Bold"
